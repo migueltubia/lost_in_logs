@@ -1,0 +1,8 @@
+[NEO4J]
+# Datos de conexión a la DB
+DBHost = localhost:7687
+DBUser = neo4j
+DBPass = 
+
+[VirusTotal]
+key = PUT_HERE_YOUR_KEY
