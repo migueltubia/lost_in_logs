@@ -50,7 +50,7 @@ class VirusTotal(Analyzer):
             ip_report = None
         if ip_report is not None:
             if ip_report["response_code"] == 200:
-                result ["country"] = ip_report["results"]["country"]
+                result ["country"] = ip_report["results"]["country"] if "country" in ip_report["results"].keys() else ""
                 detected_urls = ip_report["results"]["detected_urls"]
                 total_pos = sum([u["positives"] for u in detected_urls])
                 if total_pos > 0:

@@ -97,7 +97,7 @@ nodes = []
 ips=[]
 
 for i, x in enumerate(engines):
-    if engine==engineNames[i]:
+    if str(engine).lower()==str(engineNames[i]).lower():
         print ("Ejecutando engine " + engine)
         try:
             engineClass = getattr(x, engineNames[i])
